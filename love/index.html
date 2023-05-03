@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>dzw&wyl ❥(^_-) 爱心发射biubiubiu</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+    <iframe src="../music/本兮/silence.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe> 
+    <style type="text/css">
+        audio{
+            display: none;
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(to right, #fad0c4 0%, #ffd1ff 100%);">
+    <audio id="audio" autoplay="autoplay" preload="auto" controls="controls" loop="loop">
+        <source src="../music/本兮/情花.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="container">
+        <div style="text-align: center;">
+		<h1 class="content-title" style="color:red">丁志文❥❥❥王育玲</h1>
+        </div>
+    </div>
+    <div id="div1" style="text-align:center;color:rgb(0, 174, 255)"></div>
+        <script>
+            function time() {
+                var date_now = new Date(); //当前时间
+                var date_begin = new Date("2016/03/05 05:20:00")
+                var total = (date_now.getTime()-date_begin.getTime())/1000
+                var day = parseInt(total/(24*60*60))
+                var afterDay = total-day*24*60*60
+                var hour = parseInt(afterDay/(60*60))
+                var afterHour = total-day*24*60*60-hour*60*60
+                var min = parseInt(afterHour/60)
+                var seconds = Math.ceil(total - day*24*60*60 - hour*60*60 - min*60)
+                var time = "我们在一起 " + day + " 天 " + hour + " 时 " + min + " 分 " + seconds + " 秒"+"啦！！！";
+                var div1 = document.getElementById("div1");
+                div1.innerHTML = time;
+            }
+            setInterval(time,1000);
+        </script>
+</body>
+</html>

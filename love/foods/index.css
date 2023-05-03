@@ -1,0 +1,40 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    position: fixed;
+    overflow: hidden;
+}
+#header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    float: left;
+    border-left:1px solid #bbb;
+}
+li a {
+    display: block;
+    color: #000000;
+    padding: 8px 26px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*li a:hover {
+    background-color: #4CAF50;
+}  鼠标移动到选项上修改背景颜色 */
+
+/*.active {
+    background-color: pink;
+    color: white;
+}*/
+li a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+li:last-child {
+    border-right: none;
+}
