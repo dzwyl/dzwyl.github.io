@@ -1,0 +1,24 @@
+.content-title {
+    font-family: Comic Sans MS,Helvetica Neue,Microsoft Yahei,-apple-system,sans-serif;
+    font-size: 4.7rem;
+    font-weight: 200;
+    color: var(--color-title);
+    line-height: 1;
+    margin-top: 3em;
+    margin-bottom: .3em;
+    animation: whiteShadow 1.5s ease-in-out infinite alternate;
+    text-shadow: #452d2d 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px;
+}
+a:link {text-decoration:none;background-color:#B2FF99;}    /* unvisited link */
+a:visited {text-decoration:none;background-color:#ff9999;} /* visited link */
+a:hover {text-decoration:underline;background-color:#ffffff;}   /* mouse over link */
+a:active {text-decoration:underline;background-color:#000000;}  /* selected link */
+ul.a {list-style-type:square;}
+li.music {position:absolute;left:100px;top:100px}
+li.HDU {position:absolute;left:100px;top:200px}
+li.love {position:absolute;left:100px;top:300px}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
