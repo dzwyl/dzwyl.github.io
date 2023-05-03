@@ -1,0 +1,16 @@
+from wsgiref import headers
+import requests
+import re
+from pprint import pprint
+import json
+url=f'https://h5api.m.taobao.com/h5/mtop.alimama.union.xt.en.api.entry/1.0/?jsv=2.5.1&appKey=12574478&t=1659529563119&sign=04c9350aa0fcd07e7ef746bc5a13ec31&api=mtop.alimama.union.xt.en.api.entry&v=1.0&AntiCreep=true&timeout=20000&AntiFlood=true&type=jsonp&dataType=jsonp&callback=mtopjsonp2&data=%7B%22pNum%22%3A0%2C%22pSize%22%3A%2260%22%2C%22refpid%22%3A%22mm_26632360_8858797_29866178%22%2C%22variableMap%22%3A%22%7B%5C%22q%5C%22%3A%5C%22%E5%A5%B3%E8%A3%85%5C%22%2C%5C%22navigator%5C%22%3Afalse%2C%5C%22clk1%5C%22%3A%5C%22af08e031f51e54c75e755009bb82406a%5C%22%2C%5C%22union_lens%5C%22%3A%5C%22recoveryid%3A201_33.44.253.58_2391371_1659529526684%3Bprepvid%3A201_33.44.253.58_2391371_1659529526684%5C%22%2C%5C%22recoveryId%5C%22%3A%5C%22201_33.61.31.85_24668472_1659529563279%5C%22%7D%22%2C%22qieId%22%3A%2236308%22%2C%22spm%22%3A%22a2e0b.20350158.31919782%22%2C%22app_pvid%22%3A%22201_33.61.31.85_24668472_1659529563279%22%2C%22ctm%22%3A%22spm-url%3Aa2e0b.20350158.search.1%3Bpage_url%3Ahttps%253A%252F%252Fuland.taobao.com%252Fsem%252Ftbsearch%253Frefpid%253Dmm_26632360_8858797_29866178%2526keyword%253D%2525E5%2525A5%2525B3%2525E8%2525A3%252585%2526clk1%253Daf08e031f51e54c75e755009bb82406a%2526upsId%253Daf08e031f51e54c75e755009bb82406a%2526spm%253Da2e0b.20350158.search.1%2526pid%253Dmm_26632360_8858797_29866178%2526union_lens%253Drecoveryid%25253A201_33.44.253.58_2391371_1659529526684%25253Bprepvid%25253A201_33.44.253.58_2391371_1659529526684%22%7D'
+headers={
+    'cookie': 'cna=4lVxG0IhN2ACAXAKgqEc4cR5; _m_h5_tk=02335352e658d14d88f313c8fd3b9007_1659539266818; _m_h5_tk_enc=42d5ca93b9a2dfe050592fe241c8f19f; xlly_s=1; _samesite_flag_=true; cookie2=121975319428aeb186f7fa39c79959e7; t=eceb3fbb1a87c9608fab8371503a437b; _tb_token_=57e1e9bb6387b; sgcookie=E100BSZzh%2BfG4F%2FABnJm9lM7c4ZOQvna%2Berz3sLj0x7RDlkB9khTcMUuYwooqQOAdwegQnLiADZSq0dLz8vEFQKGYZXo8ugigFd73hQkCSHkWR0%3D; unb=2201226915610; uc3=nk2=F5RARJlI6T7E564%3D&vt3=F8dCv4GzuqQy%2BHOn33o%3D&id2=UUphy%2FA7bqg%2BFG6NiA%3D%3D&lg2=VFC%2FuZ9ayeYq2g%3D%3D; csg=0e6b89a9; lgc=tb566125801; cancelledSubSites=empty; cookie17=UUphy%2FA7bqg%2BFG6NiA%3D%3D; dnk=tb566125801; skt=00c4921d9c36254c; existShop=MTY1OTUyOTIyNw%3D%3D; uc4=id4=0%40U2grEJfOjA3jZngxQw0ORvgySm6Z4%2FhN&nk4=0%40FY4L6MeDKO4qsDsjs2XWD7BwCqXGBQ%3D%3D; tracknick=tb566125801; _cc_=UtASsssmfA%3D%3D; _l_g_=Ug%3D%3D; sg=10a; _nk_=tb566125801; cookie1=WvNJYxY4cpqPqUPlQrY6y80tmzJwyBNlCFRxrWWQojE%3D; mt=ci=14_1; thw=cn; uc1=cookie16=Vq8l%2BKCLySLZMFWHxqs8fwqnEw%3D%3D&cookie21=VT5L2FSpcHv%2BujM8lw%3D%3D&existShop=false&cookie15=VFC%2FuZ9ayeYq2g%3D%3D&pas=0&cookie14=UoexOzkHHaJTYw%3D%3D; tfstk=cFzOByaIY9XGgJmSc5In0xB1785hwT6xdCMDkrkhmivQDv10-z4R35SsGYkO9; l=eBSc1KelL73TLT7UKOfanurza77OSIRYYuPzaNbMiOCP_Q1B5IOGW6xNiL86C3GVhsiBR3Wrj_IwBeYBq7VonxvtNSVsr4Dmn; isg=BGNjVz-BBaBIR8mU4hIYw23g8qcNWPea2lFIR5XAv0I51IP2HSiH6kGCyqRa9E-S',
+    'referer': 'https://uland.taobao.com/',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+}
+response=requests.get(url=url,headers=headers)
+html_data=response.text
+#pprint(response.text)
+itemname=re.findall('mtopjsonp2(.*?)',html_data)[0]
+print(itemname)

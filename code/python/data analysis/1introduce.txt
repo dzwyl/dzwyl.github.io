@@ -1,0 +1,11 @@
+#1. numpy库 numerical python
+#2. pandas库 
+#3. matplotlib库 制图及二维数据可视化
+#4. scipy库 用于计算 数值积分和微分方程求解：integrate 线性代数和矩阵分解：linalg 
+# 函数优化器和求根算法：optimize 信号处理：signal 稀疏矩阵求解：sparse special 概率统计：stats
+#5. scikit-learn项目： 分类、回归、聚类、降维、模型选择、预处理
+#6. statsmodels 统计分析包 回归模型、方差、时间序列、核密度估计、核回归、统计模型结果可视化
+
+#python解释器 $ python hello_world.py  即可运行
+#Ipython Tab补全 %run运行脚本 %timeit
+

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!--html全局属性 accesskey,class,contentditable,contextmenu,data-*,dir,draggable,dropzone,hidden,
+id,lang,spellcheck,style,tabledex,title,translate,-->
+
+<!-- 区块元素 p h1 table 内联元素 b tb a img  
+div标签组合块级元素   span-->
+
+<!-- 布局 div table-->
+
+<!--URL--scheme://host.domain:port/path/filename-->
+
+<!--框架iframe  frameborder不显示边框  target实现网页内网页-->
+<iframe src="demo_iframe.htm" name="iframe_a" width="800" height="200" frameborder="0"></iframe>
+<p><a href="https://www.runoob.com" target="iframe_a" rel="noopener">RUNOOB.COM</a></p>
+
+<!--颜色  十六进制#000000=#000  	rgb(0,0,0)-->
+<p style="color:black;background-color:rgb(255,192,203)">通过 rbg 值设置背景颜色</p>
+<iframe src="https://www.runoob.com/html/html-colornames.html" name="colorpage" width="600" height="600" frameborder="0"></iframe>
+<iframe src="https://www.runoob.com/html/html-entities.html" name="entities" width="600" height="600" frameborder="0"></iframe>
+<html>
+<!-- 头部head，title浏览器中标题
+meta基本元数据，name，content，http-equiv="refresh"刷新页面
+style定义文档样式,base链接地址该标签作为文档中默认链接
+link定义文档与外部资源的关系
+script加载脚本文件 如JavaScript-->
+<head>
+<meta charset="utf-8">
+<title>wenyu</title>
+<style type="text/css">
+    body {background-color:rgb(255,192,203)}
+    p {color:blue}
+    thead {color:green;}
+    tbody {color:blue;}
+    tfoot {color:red;}
+</style>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body style="text-align:center;background-color:rgb(255,192,203);">
+    <div class="文本格式化">
+        <h1 style="text-align:center;">HTML教程</h1>
+        <hr>
+        <!-- 注释方法，hr水平线 br换行-->
+    <!--文本格式化方法
+        b strong加粗，em强调，i斜体，small小号字体
+        ins下划线，del删除线，sup上标，sub下标-->
+        <p><font size="6">段<br>落</font></p>
+        <b>bold粗体</b><br>
+        <em>强调文本em</em><br>
+        <strong>加粗<span style="color:blue">蓝色</span>文本strong等同于bold<strong><br>
+        <small>小号字</small><br>
+        <i>italic斜体---em</i><br>
+        <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+        <p>这是<sup>上标</sup> 和<sub>下标</sub></p>
+    <!-- 计算机输出-->
+        <code>电脑代码格式</code><br>
+        <samp>计算机代码样本</samp><br>
+        <kbd>键盘输入</kbd><br>
+        <var>变量</var><br>
+        <pre>预格式文本</pre><br>
+    <!-- 引文引用，标签定义  abbr缩写，address地址，bdo文本方向rtl-ltr，blockquote引用url，q短引用，cite定义作品标题-->
+        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p><br>
+        <address>USA</address><br>
+        <bdo dir="rtl">该段落文字从右到左显示</bdo><br>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">WWF has been protecting the future of nature</blockquote>
+        <p>WWF's goal is to: 
+            <q>Build a future where people live in harmony with nature.</q>
+            We hope they succeed.</p><br>
+        <img src="C:/VSCODE/OIP-C.jpg" width="220" height="277" alt="The Scream">
+        <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p><br>
+        <dfn>定义项目</dfn><br>
+    <!-- html超链接，未访问过蓝色+下划线，访问过紫色+下划线，target="_blank"在新页面打开-->
+        <a href="https://www.bilibili.com" target="_blank">b站</a><br>
+    <!--图片超链接  src源属性  alt无法载入图像时替代文本
+    map定义图像地图  area可点击区域的图像映射 
+    属性值：alt，coords区域坐标，href，hreflang规定url语言，media，nohref，
+    rel-alternate，author，bookmark，help，license，next，nofollow，noreferrer，prefetch，prev，search，tag
+    shape-default，rect，circle，poly  target-_blank,_parent,_self,_top,framename  type-->
+        <img src="C:/VSCODE/OIP-C.jpg" width="258" height="300 /" alt="error" usemap="catmap"><br>
+        <map name="catmap">
+            <area shape="rect" coords="0,0,258,300" alt="cat" href="https://alifei03.cfp.cn/creative/vcg/800/version23/VCG41175510742.jpg">
+        </map>
+    </div>
+<!-- CSS渲染html元素标签样式 
+内联  背景颜色，字体，颜色，大小，文本对齐方式  内部写在head内style，外部用link写在head内-->
+    <div>
+        <p style="font-family:arial;color:rgb(255, 0, 212);margin-left:0px;font-size:50px">内联样式</p>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </div>
+<!-- 表格table tr-row行 td-data数据  th-head表头  column列  caption-表格标题  colgroup背景色 col列的属性
+thead页眉  tbody主体  tfoot页脚-->
+    <div>
+        <table border="1" style="text-align:center"></table>>
+            <caption>wen table</caption>
+            <colgroup>
+                <col span="1" style="background-color:rgb(0, 255, 242)">
+                <col style="background-color:yellow">
+            </colgroup>
+            <thead>
+                <tr>
+                <th>Month</th>
+                <th>Savings</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <td>row 1, cell 1</td>
+                <td>row 1, cell 2</td>
+            </tr>
+            <tr>
+                <td>row 2, cell 1</td>
+                <td>row 2, cell 2</td>
+            </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                  <td>Sum</td>
+                  <td>$180</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+<!-- 列表 unorder list无序-->
+    <div>
+        <ul>
+            <li>无序列表</li>
+            <li>Coffee</li>
+            <li>Milk</li>
+        </ul>
+        <ol>
+            <li>有序列表</li>
+            <li>Coffee</li>
+            <li>Milk</li>
+        </ol>
+        <h4>一个自定义列表：</h4>
+            <dl>
+                <dt>Coffee</dt>
+                <dd>- black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>- white cold drink</dd>
+            </dl>
+    </div>
+<!--表单   input输入元素  radio单选按钮  checkbox复选框  submit提交按钮-->   
+        <div>
+        <form action="">
+            Username: <input type="text" name="user"><br>
+            Password: <input type="password" name="password">
+            <input type="submit" value="Submit">
+        </form>
+        <form action="">
+            <input type="radio" name="sex" value="male">男<br>
+            <input type="radio" name="sex" value="female">女
+        </form>
+        <form>
+            <input type="checkbox" name="vehicle" value="Bike">我喜欢自行车<br>
+            <input type="checkbox" name="vehicle" value="Car">我喜欢小汽车
+        </form>
+    </div>
+<!--脚本script-->
+    <script>
+        document.write("Hello World!");
+    </script>
+    <noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
+    <p id="demo">JavaScript 能改变 HTML 元素的样式。</p>
+    <script>
+    function myFunction()
+    {
+        x=document.getElementById("demo") // 找到元素
+        x.style.color="#ff0000";          // 改变样式
+    }
+    </script>
+    <button type="button" onclick="myFunction()">点击这里</button><br>
+
+<!--video-->
+    <video width="600" height="400" controls>
+        <source src="你能不能不离开呢 - 抖音.mp4" type="video/mp4">
+        你的浏览器不支持 video 标签。
+    </video><br>
+<!--audio  mp3-mpeg ogg wav-->
+    <audio controls>        
+        <source src="胆怯.flac" type="audio/mpeg">
+        你的浏览器不支持audio标签。
+    </audio><br>
+<!--canvas二维网格用JS在网页上，左上角(0，0)-->
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #ffffff;">
+        您的浏览器不支持 HTML5 canvas 标签。
+    </canvas>
+<!--ctx绘图-->        
+    <script>
+        var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+        ctx.fillStyle="#FFFFFF";
+        //画矩形
+        ctx.fillRect(0,0,200,100);
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,100);
+        ctx.stroke();
+        //画圆
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+
+        var grd=ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        // 填充渐变
+        ctx.fillStyle=grd;
+        ctx.fillRect(10,10,150,80);        
+    </script><br>
+    <canvas id="text" width="600" height="200" style="border:1px solid #ffffff;">
+        您的浏览器不支持 HTML5 canvas 标签。
+    </canvas>
+    <script>
+        //文本
+        var c=document.getElementById("text");
+        var ctx=c.getContext("2d");
+        ctx.font="30px Arial";
+        ctx.fillText("Hello World",10,50);
+        //圆渐变
+        var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        ctx.fillStyle=grd;
+        ctx.fillRect(10,10,150,80);        
+    </script><br>
+<!--SVG可缩放矢量图用XML-->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <circle cx="100" cy="50" r="40" stroke="black" stroke-width="20" fill="red" />
+    </svg><br>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+        style="fill:rgb(202, 14, 14);stroke:purple;stroke-width:5;fill-rule:evenodd;">
+    </svg><br>
+<!--MathML数学符号和公式-->
+    <math xmlns="http://www.w3.org/1998/Math/MathML">               
+        <mrow>
+           <msup><mi>a</mi><mn>2</mn></msup>
+           <mo>+</mo>                              
+           <msup><mi>b</mi><mn>2</mn></msup>
+           <mo>=</mo>                              
+           <msup><mi>c</mi><mn>2</mn></msup>
+        </mrow>                      
+    </math>
+<!--拖放 Drag和Drop-->
+<!--Geolocation地理定位-->
+    <p id="demo">点击按钮获取您当前坐标：</p>
+    <button onclick="getLocation()">点击获取坐标</button>
+    <script>
+    var x=document.getElementById("demo");
+    function getLocation()
+    {
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        else
+        {
+            x.innerHTML="该浏览器不支持获取地理位置。";
+        }
+    }
+
+    function showPosition(position)
+    {
+        var latlon=position.coords.latitude+","+position.coords.longitude;
+
+        var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+        +latlon+"&zoom=14&size=400x300&sensor=false";
+        document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";
+    }
+    
+    function showError(error)
+    {
+        switch(error.code) 
+        {
+            case error.PERMISSION_DENIED:
+                x.innerHTML="用户拒绝对获取地理位置的请求。"
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML="位置信息是不可用的。"
+                break;
+            case error.TIMEOUT:
+                x.innerHTML="请求用户地理位置超时。"
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML="未知错误。"
+                break;
+        }
+    }
+    </script>
+<!--input类型  disable禁用 max maxlength min pattern输入模式 readonly输入值无法修改 required必须的
+ size可见字符数 step合法数字间隔 value默认值--> 
+    <form action="demo-form.php" method="get">
+    选择你喜欢的颜色: <input type="color" name="favcolor">
+    <input type="submit"><br>
+    生日: <input type="date" name="bday">
+    <input type="submit"><br>
+    生日 (日期和时间): <input type="datetime" name="bdaytime">
+    <input type="submit"><br>
+    生日 (日期和时间): <input type="datetime-local" name="bdaytime">
+    <input type="submit"><br>
+    E-mail: <input type="email" name="usremail">
+    <input type="submit"><br>
+    生日 ( 月和年 ): <input type="month" name="bdaymonth">
+    <input type="submit"><br>
+    数量 ( 1 到 9 之间): <input type="number" name="quantity" min="1" max="9" value="3">
+    <input type="submit"><br>
+    Points: <input type="range" name="points" min="1" max="10" value="3">
+    <input type="submit"><br>
+    Search bing: <input type="search" name="bingsearch">
+    <input type="submit"><br>
+    电话号码: <input type="tel" name="usrtel">
+    <input type="submit"><br>
+    选择时间: <input type="time" name="usr_time">
+    <input type="submit"><br>
+    添加你的主页: <input type="url" name="homepage">
+    <input type="submit"><br>
+    选择周: <input type="week" name="year_week">
+    <input type="submit"><br>
+    </form><br>
+<!--表单元素 datalist输入选项列表 keygen验证用户 output-->
+    <form action="demo-form.php" method="get">
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+      <option value="Internet Explorer">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+    <input type="submit"><br>
+
+    <form action="demo_keygen.php" method="get">
+        用户名: <input type="text" name="usr_name">
+        加密: <keygen name="security">
+        <input type="submit">
+    </form><br>
+
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+        <input type="range" id="a" value="50">100
+        +<input type="number" id="b" value="50">
+        =<output name="x" for="a b"></output>
+    </form>    
+<!--表单属性 form中 autocomplete novalidate不验证form或input域; 
+input中 autocomplete autofocus自动聚焦 form(在form表单外的input字段引用form) formaction formenctype
+formmethod formnovalidate formtarget height width list min max multiple pattern placeholder required step-->
+    <!--autocomplete适用于form标签和input中的text search url telephone email password range color datepickers-->
+    <form action="demo-form.php" autocomplete="on" novalidate>
+        First name: <input type="text" name="fname" autofocus><br>
+    </form>
+    Last name: <input type="text" name="lname" form="form1">
+<!--语义元素(都是块元素) div和span无语义 form table img
+header头部 nav导航链接 section区段 包含了一组内容及其标题 article定义独立的内容
+aside定义侧边栏 figcaption定义<figure>元素的标题 figure规定独立的流内容（图像、图表、照片、代码等） footer尾部
+header, section, footer, aside, nav, article, figure
+{
+    display: block;
+}-->
+    <section>
+    <h1>B站</h1>
+    <p>www.bilibili.com</p>
+    </section>
+    <nav>
+    <a href="https://www.bilibili.com">B站</a> |
+    <a href="https://www.acfun.cn">A站</a> |
+    <a href="/js/">JavaScript</a>
+    </nav>
+    <figure>
+        <img src="keli.jpg" alt="The Pulpit Rock" width="304" height="200">
+        <figcaption><strong>蹦蹦炸弹</strong></figcaption>
+    </figure>
+<!--web存储 localStorage - 用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去除。
+sessionStorage - 用于临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据
+API localStorage.setItem(key,value) getItem(k) removeItem(k) clear() key(index)-->
+    <script>
+        function clickCounter()
+        {
+            if(typeof(Storage)!=="undefined")
+            {
+                if (localStorage.clickcount)
+                {
+                    localStorage.clickcount=Number(localStorage.clickcount)+1;
+                }
+                else
+                {
+                    localStorage.clickcount=1;
+                }
+                document.getElementById("result").innerHTML=" 你已经点击了按钮 " + localStorage.clickcount + " 次 ";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="对不起，您的浏览器不支持 web 存储。";
+            }
+        }
+        function del(name) 
+        {
+            localStorage.clear(name);
+            alert("删除成功!");
+            loadAll();
+        }
+    </script>    
+    <p><button onclick="clickCounter()" type="button">点我！</button></p>
+    <p><button onclick="del(localStorage.clickcount)" type="button">删除记录</button></p>
+    <div id="result"></div>
+    <!--web SQL数据库  openDatabase使用现有的或者新建一个数据库  名称，版本号，描述文本，数据库大小，创建回调
+transaction控制一个事务 执行提交或回滚  
+execute Sql  执行实际的SQL查询-->
+<script type="text/javascript">
+    var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+    var msg;
+        
+    db.transaction(function (tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+        tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "菜鸟教程")');
+        tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "www.runoob.com")');
+        msg = '<p>数据表已创建，且插入了两条数据。</p>';
+        document.querySelector('#status').innerHTML =  msg;
+    });
+
+    db.transaction(function (tx) {
+        tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
+           var len = results.rows.length, i;
+           msg = "<p>查询记录条数: " + len + "</p>";
+           document.querySelector('#status').innerHTML +=  msg;
+                
+           for (i = 0; i < len; i++){
+              msg = "<p><b>" + results.rows.item(i).log + "</b></p>";
+              document.querySelector('#status').innerHTML +=  msg;
+           }
+        }, null);
+    });
+</script>
+<!--CACHE MANIFEST 在首次下载后进行缓存  
+NETWORK 需要与服务器的连接，且不会被缓存
+FALLBACK 规定当页面无法访问时的回退页面（比如 404 页面）-->
+CACHE MANIFEST
+# 2022-9-22 v1.0.0
+/theme.css
+/logo.gif
+/main.js
+
+# *指定所有
+NETWORK:
+login.php
+
+FALLBACK:
+/html/ /offline.html
+<!--Web Workers运行在后台的 JavaScript，不会影响页面的性能。 -->
+<p>计数： <output id="result"></output></p>
+<button onclick="startWorker()">开始工作</button> 
+<button onclick="stopWorker()">停止工作</button>
+<script>
+    var w;
+    function startWorker() {
+        if(typeof(Worker) !== "undefined") {
+            if(typeof(w) == "undefined") {
+                w = new Worker("demo_workers.js");
+            }
+            w.onmessage = function(event) {
+                document.getElementById("result").innerHTML = event.data;
+            };
+        } else {
+            document.getElementById("result").innerHTML = "抱歉，你的浏览器不支持 Web Workers...";
+        }
+    }
+
+    function stopWorker() 
+    { 
+        w.terminate();
+        w = undefined;
+    }
+</script>
+</body>
+</html>
